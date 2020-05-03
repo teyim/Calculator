@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: quicksand;
+  font-weight: bold;
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 50vh;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+}
+
+.calculator-grid>button {
+  border: .5px solid #5892E2;
+  margin: .5px;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: #5892E2;
+  outline: none;
+  color: white;
+  transition: 0.3s;
+
+}
+
+#clear {
+  background-color: #FF5555;
+  border: .5px solid #FF5555;
+}
+
+#del {
+  background-color: #FFCE45;
+  border: .5px solid #FFCE45;
+}
+
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.calculator-grid>button:hover {
+  -webkit-box-shadow: -1px 7px 22px 12px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: -1px 7px 22px 12px rgba(0, 0, 0, 0.28);
+  box-shadow: -1px 7px 22px 12px rgba(0, 0, 0, 0.18);
+
+}
+
+.output {
+  grid-column: 1/-1;
+  border: 1px solid #5892E2;
+  margin: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+
+}
+
+.output .current-output {
+  font-size: 2rem;
+}
+
+.output .previous-output {
+  font-size: 1rem;
+}
